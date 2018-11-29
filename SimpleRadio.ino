@@ -15,12 +15,15 @@
 
 // Define Function Prototypes that use User Types below here or use a .h file
 //
+
+//Power levels for the RADIO
 const int8_t MICROBIT_BLE_POWER_LEVEL[] = { -30, -20, -16, -12, -8, -4, 0, 4 };
 
 // Define Functions below here or use other .ino or cpp files
 //
 
-
+//For the interrupt routine to work, it must be forward decleared in the header file
+//This is only valid for VisualStudio, works fine in the Arduino IDE
 extern "C" void RADIO_IRQHandler(void)
 {
 	 digitalWrite(LED, HIGH);
